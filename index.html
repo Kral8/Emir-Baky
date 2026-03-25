@@ -28,14 +28,12 @@
             line-height: 1.6;
         }
 
-        /* BACKGROUND */
         .bg-fixed {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             z-index: -1;
         }
 
-        /* HEADER & LANG SWITCH */
         header {
             position: fixed; top: 0; width: 100%; z-index: 1000;
             background: var(--glass); backdrop-filter: blur(20px);
@@ -50,7 +48,6 @@
         nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--secondary); }
 
-        /* Переключатель языков */
         .lang-switch {
             display: flex; background: #eee; border-radius: 30px; padding: 4px; gap: 4px;
         }
@@ -60,7 +57,6 @@
         }
         .lang-btn.active { background: var(--primary); color: white; }
 
-        /* HERO */
         .hero {
             height: 100vh; display: flex; align-items: center; justify-content: center;
             text-align: center; padding: 0 10%;
@@ -72,7 +68,6 @@
         .hero h1 { font-size: 56px; font-weight: 800; color: var(--primary); margin-bottom: 20px; letter-spacing: -2px; }
         .hero p { font-size: 20px; color: #64748b; margin-bottom: 40px; }
 
-        /* PRODUCTS */
         section { padding: 100px 8%; }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 40px; color: var(--primary); font-weight: 800; }
@@ -93,21 +88,24 @@
             color: white; font-size: 10px; padding: 5px 12px; border-radius: 20px; font-weight: 700;
         }
 
-        /* CONTACT FORM */
         .contact-wrapper {
             background: var(--primary); color: white; border-radius: 50px;
             padding: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
         }
+        .contact-info h4 { color: var(--accent-gold); text-transform: uppercase; font-size: 14px; margin-bottom: 5px; margin-top: 20px; }
+        .contact-info p { opacity: 0.9; font-size: 15px; }
+        
         input, textarea {
-            width: 100%; padding: 18px; margin-bottom: 15px; border-radius: 15px; border: none;
+            width: 100%; padding: 18px; margin-bottom: 15px; border-radius: 15px; border: none; font-family: inherit;
         }
         .send-btn {
             width: 100%; padding: 18px; background: var(--secondary); color: white;
-            border: none; border-radius: 15px; font-weight: 800; cursor: pointer; transition: 0.3s;
+            border: none; border-radius: 15px; font-weight: 800; cursor: pointer; transition: 0.3s; text-transform: uppercase;
         }
         .send-btn:hover { background: var(--accent-gold); }
 
-        /* MOBILE */
+        footer { text-align: center; padding: 40px; font-size: 13px; color: #64748b; }
+
         @media (max-width: 768px) {
             header { padding: 15px 5%; }
             nav { display: none; }
@@ -132,8 +130,8 @@
                 </ul>
             </nav>
             <div class="lang-switch">
-                <button class="lang-btn active" onclick="setLang('de')">DE</button>
-                <button class="lang-btn" onclick="setLang('ru')">RU</button>
+                <button class="lang-btn active" onclick="setLang('de', event)">DE</button>
+                <button class="lang-btn" onclick="setLang('ru', event)">RU</button>
             </div>
         </div>
     </header>
@@ -178,21 +176,34 @@
 
     <section id="contact" data-aos="fade-up">
         <div class="contact-wrapper">
-            <div>
-                <h2 data-key="cont_title" style="font-size: 32px; margin-bottom: 20px;">Kontaktieren Sie uns</h2>
-                <p data-key="cont_desc">Wir sind bereit für die Zusammenarbeit.</p>
-                <br>
-                <p><strong>Berlin, Deutschland</strong></p>
+            <div class="contact-info">
+                <h2 data-key="cont_title" style="font-size: 32px; margin-bottom: 10px;">Kontaktieren Sie uns</h2>
+                <p data-key="cont_desc" style="margin-bottom: 20px;">Wir sind bereit für die Zusammenarbeit.</p>
+                
+                <h4 data-key="loc_de">Hauptsitz Deutschland</h4>
                 <p>Pharma-Park 12, 10117 Berlin</p>
+                <p><strong>Tel:</strong> +49 30 123 456 78</p>
+
+                <h4 data-key="loc_cn">Produktion China</h4>
+                <p>Hebey Tianyuan Pharma LTD</p>
+                <p><strong>Tel:</strong> +86 150 311 18399</p>
+
+                <h4 data-key="loc_tm">Zentralasien (Turkmenistan)</h4>
+                <p>Emir Baky Distribution, Mary City</p>
+                <p><strong>Tel:</strong> +993 63 381563</p>
             </div>
             <form>
-                <input type="text" data-placeholder="ph_name" placeholder="Ihr Name">
-                <input type="email" data-placeholder="ph_email" placeholder="E-Mail">
+                <input type="text" data-placeholder="ph_name" placeholder="Ihr Name" required>
+                <input type="email" data-placeholder="ph_email" placeholder="E-Mail" required>
                 <textarea rows="4" data-placeholder="ph_msg" placeholder="Ihre Nachricht..."></textarea>
                 <button class="send-btn" data-key="btn_send">Senden</button>
             </form>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2026 VetroCore Labs GmbH. All Rights Reserved.</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -207,6 +218,7 @@
                 desc_multi: "Unterstützung des Immunsystems und Wachstums.",
                 desc_oxy: "Breitbandantibiotikum für bakterielle Infektionen.",
                 cont_title: "Kontaktieren Sie uns", cont_desc: "Wir sind bereit für die Zusammenarbeit.",
+                loc_de: "Hauptsitz Deutschland", loc_cn: "Produktion China", loc_tm: "Zentralasien (Turkmenistan)",
                 btn_send: "Senden", ph_name: "Ihr Name", ph_email: "E-Mail", ph_msg: "Ihre Nachricht..."
             },
             ru: {
@@ -216,23 +228,21 @@
                 desc_iver: "Эффективное решение против паразитов у крупного скота.",
                 desc_multi: "Поддержка иммунной системы и роста.",
                 desc_oxy: "Антибиотик широкого спектра действия.",
-                cont_title: "Свяжитесь с нами", cont_desc: "Мы готовы к сотрудничеству.",
+                cont_title: "Контактная информация", cont_desc: "Мы готовы к сотрудничеству.",
+                loc_de: "Штаб-квартира в Германии", loc_cn: "Производство в Китае", loc_tm: "Центральная Азия (Туркменистан)",
                 btn_send: "Отправить", ph_name: "Ваше имя", ph_email: "E-mail", ph_msg: "Ваше сообщение..."
             }
         };
 
-        function setLang(lang) {
-            // Кнопки
+        function setLang(lang, event) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if(event) event.target.classList.add('active');
 
-            // Текст
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
                 el.innerText = langData[lang][key];
             });
 
-            // Плейсхолдеры
             document.querySelectorAll('[data-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-placeholder');
                 el.placeholder = langData[lang][key];
