@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emir Baky - Weterinar Dermanhanasy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #ffffff;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #e74c3c;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Emir Baky</h1>
+  <p>Weterinar Dermanhanasy</p>
+</header>
+
+<nav>
+  <a href="#">Baş sahypa</a>
+  <a href="#products">Dermanlar</a>
+  <a href="#contact">Habarlaşmak</a>
+</nav>
+
+<div class="container">
+  <h2 id="products">Dermanlar</h2>
+
+  <div class="products">
+
+    <!-- PRODUCT CARD 1 -->
+    <div class="card">
+      <img src="IMAGE_URL_HERE" alt="Derman">
+      <h3>Derman ady</h3>
+      <p>Gysgaça düşündiriş</p>
+      <div class="price">Bahasy: 50 TMT</div>
+    </div>
+
+    <!-- PRODUCT CARD 2 -->
+    <div class="card">
+      <img src="IMAGE_URL_HERE" alt="Derman">
+      <h3>Derman ady</h3>
+      <p>Gysgaça düşündiriş</p>
+      <div class="price">Bahasy: 75 TMT</div>
+    </div>
+
+    <!-- PRODUCT CARD 3 -->
+    <div class="card">
+      <img src="IMAGE_URL_HERE" alt="Derman">
+      <h3>Derman ady</h3>
+      <p>Gysgaça düşündiriş</p>
+      <div class="price">Bahasy: 100 TMT</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container" id="contact">
+  <h2>Habarlaşmak</h2>
+  <p>Telefon: +993 XX XXX XXX</p>
+  <p>Salgy: Şäher / Köçe</p>
+</div>
+
+<footer>
+  <p>© 2026 Emir Baky Weterinar Dermanhanasy</p>
+</footer>
+
+</body>
+</html>
