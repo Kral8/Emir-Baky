@@ -1,10 +1,5 @@
-Понял тебя, брат. Сделал всё чётко по инструкции: структуру и стили не трогал, просто добавил китайский язык и заменил немецкий на английский, как ты просил. Теперь у тебя три полноценных языка: **RU**, **EN**, **CN**.
-
-Вот готовый код:
-
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -129,13 +124,13 @@
         <div class="nav-container">
             <nav>
                 <ul>
-                    <li><a href="#" data-key="nav_start">Главная</a></li>
-                    <li><a href="#products" data-key="nav_products">Препараты</a></li>
-                    <li><a href="#contact" data-key="nav_contact">Контакты</a></li>
+                    <li><a href="#" data-key="nav_start">Startseite</a></li>
+                    <li><a href="#products" data-key="nav_products">Produkte</a></li>
+                    <li><a href="#contact" data-key="nav_contact">Kontakt</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <button class="lang-btn active" onclick="setLang('ru', event)">RU</button>
+                <button class="lang-btn active" onclick="setLang('de', event)">DE</button>
                 <button class="lang-btn" onclick="setLang('en', event)">EN</button>
                 <button class="lang-btn" onclick="setLang('cn', event)">CN</button>
             </div>
@@ -144,16 +139,16 @@
 
     <section class="hero" data-aos="zoom-in">
         <div class="hero-box">
-            <h1 data-key="hero_title">Немецкое качество для животных</h1>
-            <p data-key="hero_subtitle">Премиальные решения для мировой ветеринарии.</p>
-            <a href="#products" class="send-btn" style="text-decoration: none; display: inline-block; width: auto; padding: 15px 40px;" data-key="btn_more">Смотреть каталог</a>
+            <h1 data-key="hero_title">Deutsche Qualität für Tiere</h1>
+            <p data-key="hero_subtitle">Premium-Lösungen für die globale Veterinärmedizin.</p>
+            <a href="#products" class="send-btn" style="text-decoration: none; display: inline-block; width: auto; padding: 15px 40px;" data-key="btn_more">Katalog ansehen</a>
         </div>
     </section>
 
     <section id="products">
         <div class="section-header" data-aos="fade-up">
-            <h2 data-key="prod_title">Наши бестселлеры</h2>
-            <p data-key="prod_subtitle">Высшие стандарты, востребованные в мире.</p>
+            <h2 data-key="prod_title">Unsere Bestseller</h2>
+            <p data-key="prod_subtitle">Höchste Standards, weltweit gefragt.</p>
         </div>
         
         <div class="grid">
@@ -161,21 +156,21 @@
                 <span class="tag">PREMIUM</span>
                 <img src="iver.png" alt="Iver">
                 <h3>TY-IVER 1%</h3>
-                <p data-key="desc_iver">Эффективное решение против паразитов у крупного скота.</p>
+                <p data-key="desc_iver">Effektive Lösung gegen Parasiten bei Großvieh.</p>
             </div>
 
             <div class="card" data-aos="fade-up" data-aos-delay="200">
                 <span class="tag">BESTSELLER</span>
                 <img src="multivit.png" alt="Multivit">
                 <h3>MULTIVIT-TY</h3>
-                <p data-key="desc_multi">Поддержка иммунной системы и роста.</p>
+                <p data-key="desc_multi">Unterstützung des Immunsystems und Wachstums.</p>
             </div>
 
             <div class="card" data-aos="fade-up" data-aos-delay="300">
                 <span class="tag">NEW FORMULA</span>
                 <img src="oxy.png" alt="Oxy">
                 <h3>TY-OXYTET 10%</h3>
-                <p data-key="desc_oxy">Антибиотик широкого спектра действия.</p>
+                <p data-key="desc_oxy">Breitbandantibiotikum für bakterielle Infektionen.</p>
             </div>
         </div>
     </section>
@@ -183,26 +178,26 @@
     <section id="contact" data-aos="fade-up">
         <div class="contact-wrapper">
             <div class="contact-info">
-                <h2 data-key="cont_title" style="font-size: 32px; margin-bottom: 10px;">Контактная информация</h2>
-                <p data-key="cont_desc" style="margin-bottom: 20px;">Мы готовы к сотрудничеству.</p>
+                <h2 data-key="cont_title" style="font-size: 32px; margin-bottom: 10px;">Kontaktieren Sie uns</h2>
+                <p data-key="cont_desc" style="margin-bottom: 20px;">Wir sind bereit für die Zusammenarbeit.</p>
                 
-                <h4 data-key="loc_de">Штаб-квартира в Германии</h4>
+                <h4 data-key="loc_de">Hauptsitz Deutschland</h4>
                 <p>Pharma-Park 12, 10117 Berlin</p>
                 <p><strong>Tel:</strong> +49 30 123 456 78</p>
 
-                <h4 data-key="loc_cn">Производство в Китае</h4>
+                <h4 data-key="loc_cn">Produktion China</h4>
                 <p>Hebey Tianyuan Pharma LTD</p>
                 <p><strong>Tel:</strong> +86 150 311 18399</p>
 
-                <h4 data-key="loc_tm">Центральная Азия (Туркменистан)</h4>
+                <h4 data-key="loc_tm">Zentralasien (Turkmenistan)</h4>
                 <p>Emir Baky Distribution, Mary City</p>
                 <p><strong>Tel:</strong> +993 63 381563</p>
             </div>
             <form>
-                <input type="text" data-placeholder="ph_name" placeholder="Ваше имя" required>
-                <input type="email" data-placeholder="ph_email" placeholder="E-mail" required>
-                <textarea rows="4" data-placeholder="ph_msg" placeholder="Ваше сообщение..."></textarea>
-                <button class="send-btn" data-key="btn_send">Отправить</button>
+                <input type="text" data-placeholder="ph_name" placeholder="Ihr Name" required>
+                <input type="email" data-placeholder="ph_email" placeholder="E-Mail" required>
+                <textarea rows="4" data-placeholder="ph_msg" placeholder="Ihre Nachricht..."></textarea>
+                <button class="send-btn" data-key="btn_send">Senden</button>
             </form>
         </div>
     </section>
@@ -216,16 +211,16 @@
         AOS.init({ duration: 1000, once: false });
 
         const langData = {
-            ru: {
-                nav_start: "Главная", nav_products: "Препараты", nav_contact: "Контакты",
-                hero_title: "Немецкое качество для животных", hero_subtitle: "Премиальные решения для мировой ветеринарии.",
-                btn_more: "Смотреть каталог", prod_title: "Наши бестселлеры", prod_subtitle: "Высшие стандарты, востребованные в мире.",
-                desc_iver: "Эффективное решение против паразитов у крупного скота.",
-                desc_multi: "Поддержка иммунной системы и роста.",
-                desc_oxy: "Антибиотик широкого спектра действия.",
-                cont_title: "Контактная информация", cont_desc: "Мы готовы к сотрудничеству.",
-                loc_de: "Штаб-квартира в Германии", loc_cn: "Производство в Китае", loc_tm: "Центральная Азия (Туркменистан)",
-                btn_send: "Отправить", ph_name: "Ваше имя", ph_email: "E-mail", ph_msg: "Ваше сообщение..."
+            de: {
+                nav_start: "Startseite", nav_products: "Produkte", nav_contact: "Kontakt",
+                hero_title: "Deutsche Qualität für Tiere", hero_subtitle: "Premium-Lösungen für die globale Veterinärmedizin.",
+                btn_more: "Katalog ansehen", prod_title: "Unsere Bestseller", prod_subtitle: "Höchste Standards, weltweit gefragt.",
+                desc_iver: "Effektive Lösung gegen Parasiten bei Großvieh.",
+                desc_multi: "Unterstützung des Immunsystems und Wachstums.",
+                desc_oxy: "Breitbandantibiotikum für bakterielle Infektionen.",
+                cont_title: "Kontaktieren Sie uns", cont_desc: "Wir sind bereit für die Zusammenarbeit.",
+                loc_de: "Hauptsitz Deutschland", loc_cn: "Produktion China", loc_tm: "Zentralasien (Turkmenistan)",
+                btn_send: "Senden", ph_name: "Ihr Name", ph_email: "E-Mail", ph_msg: "Ihre Nachricht..."
             },
             en: {
                 nav_start: "Home", nav_products: "Products", nav_contact: "Contact",
@@ -268,4 +263,3 @@
     </script>
 </body>
 </html>
-```
